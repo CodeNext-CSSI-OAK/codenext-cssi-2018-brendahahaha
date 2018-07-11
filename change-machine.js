@@ -1,5 +1,7 @@
 // Author: Brenda Buth
 
+console.log("*****************************************");
+
 console.log("This Is The Change Machine");
 
 let readline = require("readline-sync");
@@ -22,3 +24,5 @@ let pennies = Math.floor(remaindersOfNickels/1);
 console.log("pennies: " + pennies);
 
 console.log("You're Welcome!");
+
+console.log("*****************************************");

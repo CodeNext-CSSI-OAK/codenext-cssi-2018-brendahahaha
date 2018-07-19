@@ -1,12 +1,10 @@
-//Author: FirstName LastName
+//Author: Brenda Buth
 
 /******************************************************************************
                                    stringTimes()
-
 Instructions:
 Given a string and a non-negative integer n, return a larger string that is n
 copies of the original string.
-
 Examples:
 stringTimes("Hi", 2) → "HiHi"
 stringTimes("Hi", 3) → "HiHiHi"
@@ -14,7 +12,11 @@ stringTimes("Hi", 1) → "Hi"
 *******************************************************************************/
 
 function stringTimes(str, n) {
-
+  let returnString = "";
+ for(let i = 0; i < n; i++) {
+   returnString += str;
+ }
+ return returnString;
 }
 
 // Test this function.
@@ -22,11 +24,9 @@ testStringTimes();
 
 /******************************************************************************
                                    countXX()
-
 Instructions:
 Count the number of "xx" in the given string. We'll say that overlapping is
 allowed, so "xxx" contains 2 "xx".
-
 Examples:
 countXX("abcxx") → 1
 countXX("xxx") → 2
@@ -34,7 +34,13 @@ countXX("xxxx") → 3
 *******************************************************************************/
 
 function countXX(str) {
-
+  let countX = 0;
+  for(let i = 0; i < str.length; i++) {
+    if(str.charAt(i, i * 2) === "xx") {
+      count++;
+      }
+    }
+    return countX;
 }
 
 // Test this function.
@@ -42,11 +48,9 @@ testCountXX();
 
 /******************************************************************************
                                    bobThere()
-
 Instructions:
 Return true if the given string contains a "bob" string, but where the middle
 'o' char can be any char.
-
 Examples:
 bobThere("abcbob") → true
 bobThere("b9b") → true
@@ -54,6 +58,12 @@ bobThere("bac") → false
 *******************************************************************************/
 
 function bobThere(str) {
+  for(let i = 0; i < str.length; i++) {
+    if(str.charAt(i) === "b") {
+      return true;
+    }
+  }
+  return false;
 
 }
 
@@ -62,11 +72,9 @@ testBobThere();
 
 /******************************************************************************
                                    countCode()
-
 Instructions:
 Return the number of times that the string "code" appears anywhere in the given
 string, except we'll accept any letter for the 'd', so "cope" and "cooe" count.
-
 Examples:
 countCode("aaacodebbb") → 1
 countCode("codexxcode") → 2
@@ -82,14 +90,12 @@ testCountCode();
 
 /******************************************************************************
                                    xyBalance()
-
 Instructions:
 We'll say that a string is xy-balanced if for all the "x" characters in the
 string, there exists a "y" character somewhere later in the string. So "xxy" is
 balanced, but "xyx" is not. One "y" can balance multiple "x"s. A string without
 any "x"s is balanced by default, since there are no "x"s to unbalance it. Return
 true if the given string is xy-balanced.
-
 Examples:
 xyBalance("aaxbby") → true
 xyBalance("aaxbb") → false

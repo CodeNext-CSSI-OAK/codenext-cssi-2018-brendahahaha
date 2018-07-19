@@ -15,9 +15,10 @@ withoutEnd("coding") → "odin"
 *******************************************************************************/
 
 function withoutEnd(str) {
-
+return str.substring(1,str.length -1);
 }
 
+//console.log("hello");
 // Test this function.
 testWithoutEnd();
 
@@ -37,7 +38,7 @@ frontAgain("ed") → true
 
 
 function frontAgain(str) {
-
+return str.substring(0,1);
 }
 
 // Test this function.
@@ -58,6 +59,11 @@ deFront("away") → "aay"
 *******************************************************************************/
 
 function deFront(str) {
+  if(str.substring(0 === a || 1 === b)) {
+    return str;
+  } else {
+    return str.length -2;
+  }
 
 }
 
